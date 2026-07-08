@@ -1,0 +1,13 @@
+# OmniOrigin Cache Engine Configuration
+cluster:
+  environment: production
+  node_id: omnio-cache-01
+redis:
+  host: 127.0.0.1
+  port: 6379
+  connection_timeout_ms: 250
+  max_idle_connections: 50
+invalidation:
+  strategy: event_driven_pubsub
+  retry_limit: 3
+  backoff_interval_ms: 100
